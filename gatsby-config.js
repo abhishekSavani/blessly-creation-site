@@ -1,16 +1,34 @@
 require(`dotenv`).config({
   path: `.env`,
-})
+});
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Blessly`,
+    siteTitleAlt: `Blessly Creation`,
+    siteTitle: `Blessly Creation`,
+    siteHeadline: `Blessly - Evolution Of Fashion`,
+    siteDescription: `Blessly - Evolution Of Fashion`,
+    author: `@abhirajsavani`,
+    siteLanguage: `en`,
   },
   plugins: [
     {
       resolve: `@lekoarts/gatsby-theme-emilia`,
       // See the theme's README for all available options
-      options: {},
+      options: {
+        name: `Blessly`,
+        socialMedia: [
+          {
+            title: `Instagram`,
+            href: `https://www.instagram.com/blessly.creation/`,
+          },
+          {
+            title: `Twitter`,
+            href: `https://twitter.com/BlesslyCreation`,
+          },
+        ],
+        location: `Ahmedabad,Gujarat,India`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -46,4 +64,4 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
   ],
-}
+};
